@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tina Parish - Chief of Staff | Senior Executive Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #2c3e50;
+            --accent-rose: #d4a574;
+            --accent-blush: #f5e6e8;
+            --accent-deep-rose: #b8860b;
+            --soft-white: #fefefe;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --dark-gray: #343a40;
+            --gradient: linear-gradient(135deg, var(--primary-dark) 0%, #34495e 100%);
+            --rose-gradient: linear-gradient(135deg, var(--accent-rose) 0%, var(--accent-deep-rose) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background: var(--soft-white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .header {
+            background: var(--gradient);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: var(--rose-gradient);
+            opacity: 0.1;
+            transform: skewX(-15deg);
+            transform-origin: top;
+            animation: slideIn 1.2s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: skewX(-15deg) translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: skewX(-15deg) translateX(0);
+                opacity: 0.1;
+            }
+        }
+
+        .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 280px 300px;
+    gap: 40px;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+    padding: 60px 0;
+}
+
+        .profile-photo {
+            position: relative;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            border: 4px solid rgba(255, 255, 255, 0.9);
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 350px;
+            background: var(--rose-gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            border: 4px solid rgba(255, 255, 255, 0.9);
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--soft-white);
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.3rem;
+            color: var(--accent-rose);
+            margin-bottom: 30px;
+            font-weight: 500;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero-text .description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    animation: fadeInRight 1s ease-out 0.8s both;
+    border: 1px solid var(--accent-blush);
+    margin: 20px 0;
+}
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .contact-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .contact-info li::before {
+            content: '→';
+            color: var(--accent-rose);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--rose-gradient);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(212, 165, 116, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(212, 165, 116, 0.4);
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 15px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--primary-dark);
+            margin: 0 15px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: var(--accent-rose);
+        }
+
+        /* Sections */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section:nth-child(even) {
+            background: var(--light-gray);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--rose-gradient);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Experience Grid */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .experience-card {
+            background: var(--soft-white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid var(--accent-rose);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .experience-header {
+            border-bottom: 1px solid var(--accent-blush);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .experience-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .experience-header .company {
+            font-weight: 600;
+            color: var(--accent-rose);
+            font-size: 1.1rem;
+        }
+
+        .experience-header .period {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .experience-content {
+            color: var(--dark-gray);
+            line-height: 1.7;
+        }
+
+        .experience-content p {
+            margin-bottom: 15px;
+        }
+
+        .experience-content ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .experience-content li {
+            margin-bottom: 8px;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .skill-category {
+            background: var(--soft-white);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-3px);
+        }
+
+        .skill-category h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: var(--accent-blush);
+            color: var(--primary-dark);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-dark);
+            color: var(--soft-white);
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .footer h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--accent-rose);
+        }
+
+        .footer p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer-cta {
+            display: inline-block;
+            background: var(--rose-gradient);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(212, 165, 116, 0.3);
+        }
+
+        .footer-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(212, 165, 116, 0.4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+                padding-top: 40px;
+            }
+
+            .profile-photo {
+                order: -1;
+                max-width: 300px;
+                margin: 0 auto 20px auto;
+            }
+
+            .photo-placeholder {
+                height: 300px;
+            }
+
+            .profile-photo img {
+                height: 300px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+                margin-bottom: 15px;
+            }
+
+            .hero-text .subtitle {
+                margin-bottom: 20px;
+            }
+
+            .hero-text .description {
+                margin-bottom: 25px;
+            }
+
+            .contact-card {
+                margin-bottom: 40px;
+            }
+
+            .nav {
+                position: static;
+                margin: 20px auto;
+                width: fit-content;
+                display: block;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-header {
+                margin-bottom: 50px;
+            }
+
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .experience-grid {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                padding-top: 30px;
+                gap: 25px;
+            }
+
+            .profile-photo {
+                margin: 0 auto 15px auto;
+                max-width: 250px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .photo-placeholder {
+                height: 250px;
+                font-size: 1rem;
+            }
+
+            .profile-photo img {
+                height: 250px;
+            }
+
+            .contact-card {
+                margin-bottom: 30px;
+                padding: 30px;
+            }
+
+            .section {
+                padding: 50px 0;
+            }
+
+            .section-header {
+                margin-bottom: 40px;
+            }
+
+            .experience-card {
+                padding: 30px;
+            }
+
+            .skill-category {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero-content {
+                padding-top: 20px;
+                gap: 20px;
+            }
+
+            .profile-photo {
+                max-width: 220px;
+                margin: 0 auto 10px auto;
+            }
+
+            .photo-placeholder {
+                height: 220px;
+                font-size: 0.9rem;
+                padding: 15px;
+            }
+
+            .profile-photo img {
+                height: 220px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-text .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-text .description {
+                font-size: 1rem;
+            }
+
+            .contact-card {
+                padding: 25px;
+                margin-bottom: 25px;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .experience-card, .skill-category {
+                padding: 20px;
+            }
+        }
+
+        /* Scroll Animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Ensure content is visible on mobile devices */
+        @media (max-width: 968px) {
+            .scroll-reveal {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#partnership">Partnership</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#ai">AI &amp; Systems</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home" class="header">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Tina Parish</h1>
+                    <p class="subtitle">Chief of Staff | Senior Executive Assistant | Executive Business Partner</p>
+                    <p class="description">
+                        Ten-plus years as the person founders and C-suite leaders rely on when the stakes are high and there is no margin for a dropped ball. I protect executive time, run the operating cadence, own the follow-through, and build the systems — increasingly AI-powered — that let a small leadership team operate well above its headcount. Strategic operator when the work calls for judgment. Hands-on executor when it calls for delivery. Discreet in both.
+                    </p>
+                    <a href="#partnership" class="cta-button">See How I Work</a>
+                </div>
+                <div class="profile-photo">
+                    <!-- 
+                    TO ADD YOUR PHOTO:
+                    1. Replace the entire <div class="photo-placeholder">...</div> section below 
+                    2. With: <img src="your-photo.jpg" alt="Tina Parish Professional Photo">
+                    3. Use a high-quality headshot photo (at least 800x1000px)
+                    4. Professional business attire recommended
+                    -->
+                    <img src="TParish_Headshot.jpg" alt="Tina Parish Professional Photo">
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <h3>Get in Touch</h3>
+                    <ul class="contact-info">
+    <li><a href="mailto:tinaparishwriter@gmail.com" style="color: var(--primary-dark); text-decoration: none;">Send Email</a></li>
+    <li><a href="tel:+19377059852" style="color: var(--primary-dark); text-decoration: none;">Call or Text</a></li>
+    <li>United States</li>
+    <li>Full-Time, Part-Time &amp; Contract</li>
+</ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="partnership" class="section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>How I Partner With Executives</h2>
+                <p>A Chief of Staff is leverage on a leader's decisions. A Senior Executive Assistant is leverage on a leader's time. I have spent a decade doing both halves of that job, which means I know the difference — and I know which one you actually need.</p>
+            </div>
+
+            <div class="experience-grid">
+                <div class="experience-card scroll-reveal">
+                    <div class="experience-header">
+                        <h3>Leverage on Time and Attention</h3>
+                        <div class="company">The Senior Executive Assistant Half</div>
+                    </div>
+                    <div class="experience-content">
+                        <p><strong>Calendar ownership means time allocation, not scheduling.</strong> I take the discretion, protect the blocks, decline on your behalf, and reorder priorities without asking permission every time. The goal is a calendar that matches your stated priorities — and an inbox, a travel plan, and a meeting queue that never require your attention twice.</p>
+                        <ul>
+                            <li>Complex, multi-time-zone calendar management with real decision authority over access and sequencing</li>
+                            <li>Inbox triage, drafting and sending on behalf of, and delegated-access management</li>
+                            <li>Travel booking, itineraries, contingency planning, real-time rebooking, and expense reconciliation</li>
+                            <li>Meeting infrastructure end to end: logistics, materials, minutes, and the follow-up list that actually gets closed</li>
+                            <li>Protection of attention and energy, not just calendar slots — sequencing, buffer, and recovery time built in deliberately</li>
+                            <li>Anticipation as the standard: the pre-read assembled before it is requested, the later flight held before the meeting runs long</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-card scroll-reveal">
+                    <div class="experience-header">
+                        <h3>Leverage on Decisions and Execution</h3>
+                        <div class="company">The Chief of Staff Half</div>
+                    </div>
+                    <div class="experience-content">
+                        <p><strong>Nothing decided in a room dies in that room.</strong> I install the operating rhythm, keep the goals and numbers honest, frame the decisions in front of you, and chase every commitment to closure. You decide. I make deciding faster, better informed, and far less expensive.</p>
+                        <ul>
+                            <li>Operating cadence: weekly leadership meetings, monthly reviews, quarterly and annual planning — agendas, pre-reads, decision logs, follow-through</li>
+                            <li>Goal and metric systems: building the scorecard, verifying the numbers are trustworthy, keeping them visible between quarters</li>
+                            <li>Decision support: framing, options, tradeoffs, and a clear recommendation delivered without spin</li>
+                            <li>Communication architecture: all-hands content, company updates, board and investor materials, sensitive internal messaging</li>
+                            <li>Orphan projects — the important work with no owner: system implementations, integrations, compliance issues, new initiatives</li>
+                            <li>Interim function leadership when a seat is unfilled, run properly until it is hired and handed off cleanly</li>
+                            <li>Board and investor support: meeting logistics, materials, minutes, updates, and data room upkeep</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-card scroll-reveal">
+                    <div class="experience-header">
+                        <h3>Strategic Operator and Hands-On Executor</h3>
+                        <div class="company">Why Both Matter</div>
+                    </div>
+                    <div class="experience-content">
+                        <p>Most leaders under 200 people do not need two hires. They need one person who can sit in a strategy conversation on Tuesday and personally rebuild the vendor filing system on Wednesday — and treat both as equally worth doing well.</p>
+                        <ul>
+                            <li><strong>I argue in private and align in public.</strong> You get honest pushback behind the door and zero visible daylight in front of the team.</li>
+                            <li><strong>I tell you what is true, not what is comfortable.</strong> Leaders get insulated faster than anyone expects, and my job is to keep the signal clean in both directions.</li>
+                            <li><strong>I do not decide, and I do not gatekeep the team.</strong> I inform, I execute, and I make sure the right people reach you at the right time.</li>
+                            <li><strong>I hold confidentiality absolutely.</strong> Compensation, terminations, legal matters, financials, personal matters — I have handled all of it, and it stays with me.</li>
+                            <li><strong>I become the institutional memory.</strong> The vendor's name, the terms of the contract signed three years ago, and why the last offsite went sideways.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="capabilities" class="section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>What I Own</h2>
+                <p>The full scope a seasoned executive partner absorbs in a small or fast-moving organization — where there is rarely a separate person for any of it.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category scroll-reveal">
+                    <h3>Executive Time &amp; Access</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Complex Calendar Ownership</span>
+                        <span class="skill-tag">Multi-Time-Zone Scheduling</span>
+                        <span class="skill-tag">Priority &amp; Capacity Planning</span>
+                        <span class="skill-tag">Access &amp; Gatekeeping Judgment</span>
+                        <span class="skill-tag">Inbox Triage &amp; Delegated Access</span>
+                        <span class="skill-tag">Travel &amp; Itinerary Management</span>
+                    </div>
+                </div>
+
+                <div class="skill-category scroll-reveal">
+                    <h3>Operating Cadence &amp; Decision Support</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Leadership Meeting Cadence</span>
+                        <span class="skill-tag">Agendas &amp; Pre-Reads</span>
+                        <span class="skill-tag">Decision Logs &amp; Closure</span>
+                        <span class="skill-tag">Quarterly &amp; Annual Planning</span>
+                        <span class="skill-tag">Goal &amp; KPI Systems</span>
+                        <span class="skill-tag">Options &amp; Tradeoff Framing</span>
+                    </div>
+                </div>
+
+                <div class="skill-category scroll-reveal">
+                    <h3>Communications &amp; Representation</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Executive Correspondence</span>
+                        <span class="skill-tag">Ghostwriting &amp; Voice Matching</span>
+                        <span class="skill-tag">All-Hands &amp; Company Updates</span>
+                        <span class="skill-tag">Board &amp; Investor Materials</span>
+                        <span class="skill-tag">Sensitive &amp; Confidential Messaging</span>
+                        <span class="skill-tag">Client, Vendor &amp; Partner Relations</span>
+                    </div>
+                </div>
+
+                <div class="skill-category scroll-reveal">
+                    <h3>Business &amp; Financial Administration</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Expenses &amp; Corporate Cards</span>
+                        <span class="skill-tag">Vendor Invoices &amp; PO Tracking</span>
+                        <span class="skill-tag">SaaS &amp; Subscription Management</span>
+                        <span class="skill-tag">Bookkeeper &amp; Accountant Liaison</span>
+                        <span class="skill-tag">Contracts &amp; E-Signature Workflow</span>
+                        <span class="skill-tag">Insurance, Licenses &amp; Corporate Records</span>
+                    </div>
+                </div>
+
+                <div class="skill-category scroll-reveal">
+                    <h3>People, Hiring &amp; Onboarding</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Senior-Level Hiring Coordination</span>
+                        <span class="skill-tag">Interview Logistics</span>
+                        <span class="skill-tag">New-Hire Setup &amp; Onboarding</span>
+                        <span class="skill-tag">HR Administration</span>
+                        <span class="skill-tag">Policy &amp; Handbook Coordination</span>
+                        <span class="skill-tag">Contractor Management</span>
+                    </div>
+                </div>
+
+                <div class="skill-category scroll-reveal">
+                    <h3>Systems, Events &amp; Continuity</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SOP &amp; Process Documentation</span>
+                        <span class="skill-tag">Knowledge Base Architecture</span>
+                        <span class="skill-tag">Board Meetings &amp; Offsites</span>
+                        <span class="skill-tag">Conferences &amp; Client Visits</span>
+                        <span class="skill-tag">Shared Drives &amp; Version Control</span>
+                        <span class="skill-tag">Business Continuity Planning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai" class="section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>AI, Automation &amp; Systems</h2>
+                <p>The part of my work that most executive partners cannot offer. I do not just use AI to draft faster — I build the dashboards, internal tools, and automations that change what a leadership team can carry.</p>
+            </div>
+
+            <div class="experience-grid">
+                <div class="experience-card scroll-reveal">
+                    <div class="experience-header">
+                        <h3>What I Build</h3>
+                        <div class="company">Practical, In-House, No Dev Team Required</div>
+                    </div>
+                    <div class="experience-content">
+                        <p>Working inside a multi-enterprise organization spanning software and AI development, technology consulting, and e-commerce, I build the operational tooling that would otherwise sit in a backlog waiting for engineering time.</p>
+                        <ul>
+                            <li><strong>Executive dashboards</strong> that pull scattered data into a single view a founder can actually read in ninety seconds</li>
+                            <li><strong>Internal apps and lightweight tools</strong> for tracking initiatives, pipelines, onboarding, and recurring reporting</li>
+                            <li><strong>Workflow automations</strong> that remove the repetitive administrative layer from meetings, follow-ups, intake, and handoffs</li>
+                            <li><strong>AI assistants and agents</strong> configured for specific business functions — research, drafting, summarization, document review, data cleanup</li>
+                            <li><strong>Documentation systems</strong> where SOPs are written once, then turned into the automation or prompt that runs them</li>
+                            <li><strong>Prompt and system design</strong> so the tools stay usable by the team after I hand them over</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-card scroll-reveal">
+                    <div class="experience-header">
+                        <h3>Why It Matters to You</h3>
+                        <div class="company">The Practical Return</div>
+                    </div>
+                    <div class="experience-content">
+                        <ul>
+                            <li><strong>Capacity without headcount.</strong> Work that would justify another hire gets absorbed into a system instead.</li>
+                            <li><strong>Faster, better decisions.</strong> Reporting that used to take a week of assembly becomes a live view, so decisions stop waiting on data.</li>
+                            <li><strong>Continuity that does not depend on me.</strong> Documented, automated processes mean the organization keeps running when any one person is out — including me.</li>
+                            <li><strong>Adoption, not shelfware.</strong> I build for the people who will actually use it, then train them and stay available while it sticks.</li>
+                            <li><strong>Judgment about where AI does not belong.</strong> Sensitive communications, confidential matters, and relationship work stay human.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>How I Operate</h2>
+                <p>The standards I hold myself to, and what the first ninety days look like when I join a leadership team.</p>
+            </div>
+
+            <div class="experience-grid">
+                <div class="experience-card scroll-reveal">
+                    <div class="experience-header">
+                        <h3>The First 90 Days</h3>
+                        <div class="company">What You Can Expect</div>
+                    </div>
+                    <div class="experience-content">
+                        <ul>
+                            <li><strong>Days 1–30 — Learn obsessively.</strong> Your communication style, decision triggers, priorities, pet peeves, and stakeholder map, all written down. Every leader, every recurring meeting, every number that matters.</li>
+                            <li><strong>By Day 30 — Full calendar authority.</strong> Time allocation moves to me, with agreed rules for what gets declined, protected, and escalated.</li>
+                            <li><strong>Fix one visibly broken thing, completely.</strong> Credibility is bought with delivery, not diagnosis. I pick the thing that is costing you most and close it out.</li>
+                            <li><strong>By Day 60 — Take the inbox.</strong> Triage, drafting, and sending on your behalf, with the judgment calls already calibrated.</li>
+                            <li><strong>By Day 90 — Install the cadence and the documentation.</strong> A meeting rhythm that produces decisions, a follow-up system that closes them, and the systems documentation that does not exist yet.</li>
+                            <li><strong>Then shift from executing to anticipating.</strong> That transition is the entire difference between good support and senior partnership.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-card scroll-reveal">
+                    <div class="experience-header">
+                        <h3>Standards I Hold</h3>
+                        <div class="company">How I Am Worth Judging</div>
+                    </div>
+                    <div class="experience-content">
+                        <ul>
+                            <li><strong>Zero-defect logistics.</strong> Nothing dropped. Reliability first, before anything clever.</li>
+                            <li><strong>Closure over activity.</strong> Every commitment tracked to done, including yours.</li>
+                            <li><strong>Anticipation over instruction.</strong> Executing instructions well is table stakes; removing the need for them is the job.</li>
+                            <li><strong>Discretion without exception.</strong> A decade of confidential exposure with a clean record.</li>
+                            <li><strong>Structure where there was none.</strong> 60+ SOPs built across a multi-entity organization, plus a decade of process design behind them.</li>
+                            <li><strong>Calm under pressure.</strong> Fast-moving, ambiguous, high-stakes environments are the ones I am best in.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>Credentials &amp; Toolset</h2>
+                <p>Formal training in operational excellence, a decade of applied practice, and fluency in the platforms modern executive teams run on.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category scroll-reveal">
+                    <h3>Platforms &amp; Project Management</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ClickUp</span>
+                        <span class="skill-tag">Asana</span>
+                        <span class="skill-tag">Airtable</span>
+                        <span class="skill-tag">Notion</span>
+                        <span class="skill-tag">Karbon</span>
+                        <span class="skill-tag">CRM Systems</span>
+                    </div>
+                </div>
+
+                <div class="skill-category scroll-reveal">
+                    <h3>Communication &amp; Productivity</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Google Workspace</span>
+                        <span class="skill-tag">Microsoft Office Suite</span>
+                        <span class="skill-tag">Slack</span>
+                        <span class="skill-tag">Zoom</span>
+                        <span class="skill-tag">E-Signature Workflows</span>
+                        <span class="skill-tag">Expense &amp; Travel Platforms</span>
+                    </div>
+                </div>
+
+                <div class="skill-category scroll-reveal">
+                    <h3>AI &amp; Automation</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AI Agents &amp; Assistants</span>
+                        <span class="skill-tag">Prompt &amp; System Design</span>
+                        <span class="skill-tag">Workflow Automation</span>
+                        <span class="skill-tag">No-Code App Development</span>
+                        <span class="skill-tag">Executive Dashboards</span>
+                        <span class="skill-tag">Reporting Automation</span>
+                    </div>
+                </div>
+
+                <div class="skill-category scroll-reveal">
+                    <h3>Certifications</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Six Sigma Black Belt — PMI®</span>
+                        <span class="skill-tag">Lean Six Sigma — PMI®</span>
+                        <span class="skill-tag">Operational Excellence — PMI®</span>
+                        <span class="skill-tag">Business Analytics — IIBA®</span>
+                        <span class="skill-tag">Business Law for Managers — NASBA</span>
+                        <span class="skill-tag">Finance Essentials — NASBA</span>
+                    </div>
+                </div>
+
+                <div class="skill-category scroll-reveal">
+                    <h3>Education</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Bachelor of Science</span>
+                        <span class="skill-tag">Business Administration</span>
+                        <span class="skill-tag">University of Phoenix</span>
+                    </div>
+                </div>
+
+                <div class="skill-category scroll-reveal">
+                    <h3>Writing Credentials</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">8x Bestselling Author</span>
+                        <span class="skill-tag">Business &amp; Marketing Titles</span>
+                        <span class="skill-tag">Executive Ghostwriting</span>
+                        <span class="skill-tag">Thought Leadership</span>
+                        <span class="skill-tag">Long-Form &amp; Strategic Messaging</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>Where I Fit Best</h2>
+                <p>The environments where this kind of partnership pays for itself fastest.</p>
+            </div>
+
+            <div class="experience-grid">
+                <div class="experience-card scroll-reveal">
+                    <div class="experience-header">
+                        <h3>The Right Match</h3>
+                        <div class="company">Environments and Leaders</div>
+                    </div>
+                    <div class="experience-content">
+                        <ul>
+                            <li><strong>Founder-led and high-growth organizations</strong> where the org chart is still forming and the work outpaces the headcount</li>
+                            <li><strong>Multi-entity or multi-venture operations</strong> requiring one person to hold context across all of them</li>
+                            <li><strong>Leaders ready to actually delegate</strong> the calendar and the inbox — that is where most of the value lives</li>
+                            <li><strong>Teams that need systems built, not just maintained,</strong> and want documentation and automation to come with it</li>
+                            <li><strong>Remote and distributed environments</strong> across professional services, technology, consulting, and e-commerce</li>
+                            <li><strong>Engagements structured as full-time, part-time, or contract,</strong> depending on what the role genuinely requires</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="footer">
+        <div class="container">
+            <h3>Let's Talk About What You Need Carried</h3>
+            <p>
+                Whether the role is titled Chief of Staff, Senior Executive Assistant, or Executive Business Partner, the question is the same: what is taking your time that should not be? Let's find out whether I am the right person to take it.
+            </p>
+            <a href="mailto:tinaparishwriter@gmail.com" class="footer-cta">Start the Conversation</a>
+            
+            <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.2);">
+                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+                    © 2026 Tina Parish · Chief of Staff &amp; Senior Executive Assistant · Available for full-time, part-time, and contract engagements.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Check if mobile device
+        const isMobile = window.innerWidth <= 968;
+        
+        // If mobile, show all content immediately
+        if (isMobile) {
+            document.querySelectorAll('.scroll-reveal').forEach(el => {
+                el.classList.add('revealed');
+            });
+        } else {
+            // Scroll reveal animation for desktop
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all elements with scroll-reveal class
+            document.querySelectorAll('.scroll-reveal').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Handle window resize to mobile
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 968) {
+                document.querySelectorAll('.scroll-reveal').forEach(el => {
+                    el.classList.add('revealed');
+                });
+            }
+        });
+
+        // Add some interactive hover effects
+        document.querySelectorAll('.experience-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.borderLeftWidth = '8px';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.borderLeftWidth = '5px';
+            });
+        });
+    </script>
+</body>
+</html>
